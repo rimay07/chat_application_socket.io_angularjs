@@ -1,86 +1,78 @@
-# Angular Socket.io Seed
+# Chat Application using Angularjs and socket.io
 
-Start an awesome app with AngularJS on the front, Socket.io + Express + Node on the back. This
-project is an application skeleton for writing [AngularJS](http://angularjs.org/) apps that use
-web sockets to add real-time functionality. If you're not planning on using web sockets, you
-should consider the [Angular Express Seed](https://github.com/btford/angular-express-seed) instead.
+Features of the application:
+1. Connect to a 0.9 socket.io server
+2. Messages are printed when pressed and shows a delivered status once an event from the server is received
+3. Background color and text color toggle
+4. Time 12/24 hour toggle
+5. Sound on/off toggle
+6. CTRL + Enter to send message toggle
+7. Local storage settings storage
+8. Missed message counter
+9. Tabs support in the message area
+10. User rename
+11. Responsive design 
 
-The seed contains angular libraries, test libraries and a bunch of scripts all preconfigured for
-instant web development gratification. Just clone the repo (or download the zip/tarball) and
-you're ready to develop your application.
+Prerequiste:
+1. Nodejs
+2. Bower
+3. Jade
 
-The seed app shows how to wire together Angular client-side components with Socket.io and Express
-on the server. It also illustrates writing angular partials/views with the Jade templating library.
+Supports multi-screen viewing
 
-_Note: Although Jade supports interpolation, you should be doing that mostly on the client. Mixing
-server and browser templating will convolute your app. Instead, use Jade as a syntactic sugar for
-HTML, and let AngularJS take care of interpolation on the browser side._
+## Using the chat app
 
-## How to use it
-
-Clone the angular-socket-io-seed repository and start hacking!
-
-### Running the app
-
-Runs like a typical express app:
+Clone the chat_application_socket.io_angularjs
 
 ```shell
-node app.js
+git clone https://github.com/rimay07/chat_application_socket.io_angularjs.git
 ```
 
-### Running tests
+### Starting the chat app
 
-Coming soon!
+Installing libraries
 
-### Receiving updates from upstream
+```shell
+npm install
+```
 
-Just fetch the changes and merge them into your project with git.
+Starting the application
+```shell
+npm start
+```
+
+Open your browser to http://localhost:8081 to view the chat application
 
 ### Updating `angular.js`
-
-Alternatively, you can update AngularJS with [Bower](http://bower.io):
 
 ```shell
 bower update angular
 ```
 
-## Example Application
-
-I created a [simple instant messaging application](https://github.com/btford/angular-socket-io-im)
-and wrote a [blog post](http://briantford.com/blog/angular-socket-io.html) walking through the app to
-illustrate using the seed.
-
 ## Directory Layout
     
-    app.js                  --> app config
-    bower.json              --> for bower
-    package.json            --> for npm
-    public/                 --> all of the files to be used in on the client side
-      css/                  --> css files
-        app.css             --> default stylesheet
-      img/                  --> image files
-      js/                   --> javascript files
-        app.js              --> declare top-level app module
-        controllers.js      --> application controllers
-        directives.js       --> custom angular directives
-        filters.js          --> custom angular filters
-        services.js         --> custom angular services
+    app.js                  	--> app config
+    bower.json              	--> for bower
+    package.json            	--> for npm
+    public/                 	--> client side files
+      css/                  	--> css files
+        app.css             	--> default stylesheet
+      js/                   	--> javascript files
+        app.js              	--> top-level app module
+		socket-service.js		--> angular socket service
+		messages-service.js		--> angular message service
+		settings-service.js		--> angular settings service
+		chat-controller.js		--> angular chat controller
+		settings-controller.js	--> angular settings controller
       bower_components/
-        angular/            --> angular.js
-        angular-socket-io/  --> socket.io adapter for angular
+        angular/            	--> angular.js
+        angular-socket-io/  	--> socket.io adapter for angular
     routes/
-      index.js              --> route for serving HTML pages and partials
+      index.js              	--> route for serving HTML pages and inner pages
     views/
-      index.jade            --> main page for app
-      layout.jade           --> doctype, title, head boilerplate
-      partials/             --> angular view partials (partial jade templates)
-        partial1.jade
-        partial2.jade
+      index.jade            	--> main page
+      layout.jade           	--> doctype, title, head boilerplate
+      pages/             		--> angular view pages
+        chat.jade
+        settings.jade
 
-
-
-## Contact
-
-For more information on AngularJS please check out http://angularjs.org/
-For more on Express and Jade, http://expressjs.com/ and http://jade-lang.com/ are
-your friends.

@@ -1,5 +1,8 @@
 # Chat Application using Angularjs and socket.io
 
+npm: [![Dependency Status](https://www.versioneye.com/user/projects/553a42d21d2989bdd50000a4/badge.svg?style=flat)](https://www.versioneye.com/user/projects/553a42d21d2989bdd50000a4)
+Bower: [![Dependency Status](https://www.versioneye.com/user/projects/553a42ce1d2989f7ee0000db/badge.svg?style=flat)](https://www.versioneye.com/user/projects/553a42ce1d2989f7ee0000db)
+
 Features of the application:
 1. Connect to a 0.9 socket.io server
 2. Messages are printed when pressed and shows a delivered status once an event from the server is received

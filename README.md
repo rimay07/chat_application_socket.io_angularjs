@@ -12,6 +12,9 @@ Features of the application:
 9. Tabs support in the message area
 10. User rename
 11. Responsive design 
+12. Auto scroll to bottom of chat window
+13. Message sound mute in settings
+14. Automatic background change on selection
 
 Prerequiste:
 1. Nodejs

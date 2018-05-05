@@ -1,0 +1,30 @@
+div(ng-controller='settingsCtrl')
+  .col
+    .clr
+    .settings-wrapper
+      form()
+        h4(ng-style="{'color':bg.color}") Your current user name is:
+        input(ng-model='newName', placeholder='{{name}}', class='nameBox')
+        div.wrapper
+          div.titleWrapper(ng-style="{'color':bg.color}") Interface Color:
+          div.toggleWrapper
+            input(id='toggle-interface', type='checkbox', checked='', data-toggle='toggle', data-on='Light', data-off='Dark', data-width='80')
+        div.wrapper
+          div.titleWrapper(ng-style="{'color':bg.color}") Clock Display:
+          div.toggleWrapper
+            input(id='toggle-clock', type='checkbox', checked='', data-toggle='toggle', data-on='12HR', data-off='24HR', data-width='80')
+        div.wrapper
+          div.titleWrapper(ng-style="{'color':bg.color}") Message Sounds:
+          div.toggleWrapper
+            input(id='toggle-sound', type='checkbox', checked='', data-toggle='toggle', data-on='ON', data-off='OFF', data-width='80')
+        div.wrapper
+          div.titleWrapper(ng-style="{'color':bg.color}") Send Message on CTRL + ENTER
+          div.toggleWrapper
+            input(id='toggle-enter', type='checkbox', checked='', data-toggle='toggle', data-on='ON', data-off='OFF', data-width='80')
+  div(class='footer')
+    .footer-wrapper
+        div
+          button(type='submit', class='footerBTN', ng-click='saveSettings()')
+            |  Save Changes
+          button(class='footerBTN', ng-click='resetToDefault()')
+            |  Reset to Default

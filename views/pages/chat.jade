@@ -1,0 +1,21 @@
+div(ng-controller='chatCtrl')
+  .col
+    .overflowable(ng-style="{'background-color':bg.newcolor}")
+      div(ng-repeat='message in messages track by $index', ng-class='wrapper')
+        div(ng-class='{ownerName: message.user == name, friendName: message.user != name}', ng-style="{'color':bg.color}") {{message.user}} 
+        div(ng-class='{owner: message.user == name, friend: message.user != name}') {{message.message}}
+          div(class='datetime') {{today | date: format}}
+          div(ng-if='isSeen && message.user == name')
+            div(class='delivered') Delivered
+          div(ng-if='message.user != name && sound')
+             audio(autoplay)
+               source(src='sound/tweet.ogg', type='audio/ogg')
+               source(src='sound/tweet.mp3', type='audio/mpeg')
+    #bottom
+
+  div(class='footer')
+    .footer-wrapper
+      div
+        textarea(size='60', class='msgBox', ng-model='message', placeholder='Type your message here')
+        button(type='submit', class='msgSend', ng-click='sendMessage()') 
+            i(class="fa fa-send", style='font-size:28px;')

@@ -59,11 +59,11 @@ bower update angular
         app.css             	--> default stylesheet
       js/                   	--> javascript files
         app.js              	--> top-level app module
-		socket-service.js		--> angular socket service
-		messages-service.js		--> angular message service
-		settings-service.js		--> angular settings service
-		chat-controller.js		--> angular chat controller
-		settings-controller.js	--> angular settings controller
+        socket-service.js		--> angular socket service
+        messages-service.js		--> angular message service
+        settings-service.js		--> angular settings service
+        chat-controller.js		--> angular chat controller
+        settings-controller.js	--> angular settings controller
       bower_components/
         angular/            	--> angular.js
         angular-socket-io/  	--> socket.io adapter for angular

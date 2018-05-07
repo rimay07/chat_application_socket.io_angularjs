@@ -24,14 +24,38 @@ Prerequiste:
 2. Bower
 3. Jade
 
-Supports multi-screen viewing
+Notes:
+1. Application runs on nodejs server
+2. Supports multi-screen viewing
+
+## Install Dependencies
+
+Install Nodejs
+
+Download and Install:
+https://nodejs.org/en/download/
+
+Using a Package Manager:
+https://nodejs.org/en/download/package-manager/
 
 ## Using the chat app
+
+Create Directory to your project
+
+```shell
+mkdir <project_name>
+```
 
 Clone the chat_application_socket.io_angularjs
 
 ```shell
 git clone https://github.com/rimay07/chat_application_socket.io_angularjs.git
+```
+
+Go to application folder
+
+```shell
+cd <project_name>/chat_application_socket.io_angularjs
 ```
 
 ### Starting the chat app
@@ -54,6 +78,14 @@ Open your browser to http://localhost:8081 to view the chat application
 ```shell
 bower update angular
 ```
+
+## Running Node with http server
+
+Application runs on nodejs. Inorder to use it with other servers, proxy all requests requiring node to the node application running on the same server 
+
+Example:
+For Apache server:
+https://stackoverflow.com/questions/9831594/apache-and-node-js-on-the-same-server
 
 ## Directory Layout
     
